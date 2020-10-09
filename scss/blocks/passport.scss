@@ -1,0 +1,11 @@
+.passport {
+  &_img {
+    width: 150px;
+    &:after {
+      padding-top: 150%;
+    }
+  }
+  &_name {
+    text-align: center;
+  }
+}

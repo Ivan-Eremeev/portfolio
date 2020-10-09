@@ -1,0 +1,40 @@
+@import 'mixins';
+
+@include reset(); // Сброс стилей
+
+@import 'mixingrid';
+
+// Переменные для кастомизации Mixingrid
+$columns: 12; // Колличество колонок
+$max-width: 1200px; // Максимальная ширина контейнера
+$gutter: 15px; // Расстояние между колонками
+$offset: 30px; // Поля контейнера
+$offset-sm: 15px; // Поля контейнера на мобилке
+// Брэйкпоинты
+$break_xl: 1400px;
+$break_lg: 1200px;
+$break_md: 1050px;
+$break_sm: 769px;
+$break_xs: 500px;
+
+// Переменные для кастомизации Bootstrap 4
+// $grid-gutter-width: 15px; // Отступы между колонками
+// $grid-columns: 12; // Колличество колонок
+// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1410px); // Брэйкпоинты
+// $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px); // Максимальная ширина контейнера
+// $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+
+// Шрифты
+// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+
+// Цвета
+// $black: #000;
+
+// Блоки стилей
+@import 'template';
+@import 'blocks/menu';
+@import 'blocks/header';
+@import 'blocks/passport';
+// @import 'blocks/mmenu';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';

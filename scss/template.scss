@@ -1,0 +1,67 @@
+// settings
+html {
+	&.lock {
+		overflow: hidden;
+	}
+}
+a {
+	transition: .1s;
+	text-decoration: none;
+}
+button {
+	font-family: Arial;
+	outline: none;
+}
+input {
+	font-family: Arial;
+	outline: none;
+}
+.row {
+	@include row-flex();
+}
+.wrapper {
+	@include wrapper();
+}
+body {
+	background-color: #fff;
+	font-family: Arial;
+	font-size: 16px;
+}
+h1 {
+	font-size: 45px;
+}
+h2 {
+	font-size: 40px;
+}
+.mobile-hide {
+	@media (max-width: $break_sm) {
+		display: none !important;
+	}
+}
+.mobile-visible {
+	@media (min-width: $break_sm + 1) {
+		display: none !important;
+	}
+}
+.img-responsive {
+	position: relative;
+	overflow: hidden;
+	img {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&:after {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+}
+.wrapper {
+	@include wrapper();
+}
+.row {
+	@include row-flex();
+}
+// /settings
