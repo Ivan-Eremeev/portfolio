@@ -25,16 +25,22 @@ $break_xs: 500px;
 // $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
 
 // Шрифты
-// @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+@include font-face("Pe-icon-7-stroke", "../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke", normal, normal);
 
 // Цвета
-// $black: #000;
+$blue: #372db4;
+$blueHov: #493fc8;
+
+// Анимация
+$trans: all .5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 
 // Блоки стилей
 @import 'template';
 @import 'blocks/menu';
 @import 'blocks/header';
 @import 'blocks/passport';
+@import 'blocks/social';
+@import 'blocks/welcome';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

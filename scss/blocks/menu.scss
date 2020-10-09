@@ -1,51 +1,81 @@
 .menu {
+	
 	&_nav {
-		
+		height: 100vh;
+		background-color: $blue;
+		overflow-y: auto;
+	}
+	&_nav-in {
+		min-height: 100vh;
+		padding-bottom: 100px;
+		position: relative;
 	}
 	&_list {
 		text-align: center;
+		font-size: 12px;
+		text-transform: uppercase;
+		overflow: hidden;
 	}
 	&_item {
-		
+		border-bottom: 1px solid $blueHov;
 	}
 	&_link {
-		display: block;
-		padding: 10px 0;
-		margin: 0 10px;
+		display: flex;
+		flex-direction: column;
+		padding: 23px 0;
 		text-decoration: none;
-		color: #ccc;
-		@include line-fade();
-		&:hover {
-			color: #ccc;
-			border-color: #ccc;
+		color: #b5b0f7;
+		transition: $trans;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			width: 0;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $blueHov;
+			transition: $trans;
 		}
+		&:hover, &.active {
+			color: #fff;
+			&:before {
+				width: 100%;
+			}
+		}
+	}&_over {
+		display: none;
+	}
+	&_icon {
+		font-family: "Pe-icon-7-stroke";
+		font-size: 30px;
+		margin-bottom: 8px;
+		z-index: 2;
+	}
+	&_text {
+		z-index: 2;
 	}
 	@media (max-width: $break_sm) {
 		position: relative;
 		&_nav {
-			width: 80%;
-			background-color: #666;
 			z-index: 10;
-			overflow: hidden;
 		}
 		&_item {
-			display: block;
-			padding: 0 5px;
-			border-bottom: 1px solid #ccc;
+
 		}
 		&_link {
-			border: none;
-			margin: 0;
+			
 		}
 
 		&_over {
-			display: none;
 			z-index: 9;
 		}
 		&_btn {
 			width: 10px;
 			height: 10px;
 			background-color: green;
+			z-index: 2;
 		}
 		&_close {
 			width: 10px;
@@ -72,7 +102,6 @@
 				bottom: 0;
 				left: -1000px;
 				transition: .5s;
-				overflow-y: auto;
 			}
 			.menu_over {
 				position: fixed;
@@ -100,7 +129,6 @@
 				bottom: 0;
 				right: -1000px;
 				transition: .5s;
-				overflow-y: auto;
 			}
 			.menu_over {
 				position: fixed;
@@ -128,7 +156,6 @@
 				top: -1000px;
 				left: 0;
 				transition: .5s;
-				overflow-y: auto;
 			}
 			.menu_item {
 				overflow: hidden;
@@ -159,7 +186,6 @@
 				left: 0;
 				bottom: 0;
 				transition: .5s;
-				overflow-y: auto;
 			}
 			.menu_item {
 				overflow: hidden;
@@ -189,9 +215,12 @@
 			}
 		}
 	}
-	@media (max-width: $break_xs) {
-		&_nav {
-			width: 100%;
+	@media (min-width: $break_sm) {
+		&_btn {
+			display: none;
+		}
+		&_close {
+			display: none;
 		}
 	}
 }

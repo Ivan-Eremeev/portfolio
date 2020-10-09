@@ -1,0 +1,21 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  &_item {
+    
+  }
+  &_link {
+    padding: 5px;
+    margin: 0 2px;
+    font-size: 14px;
+    color: #b5b0f7;
+    transition: $trans;
+    &:hover {
+      color: #fff
+    }
+  }
+}

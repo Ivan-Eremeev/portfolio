@@ -9,11 +9,13 @@ a {
 	text-decoration: none;
 }
 button {
-	font-family: Arial;
+	font-family: 'Montserrat',
+	sans-serif;
 	outline: none;
 }
 input {
-	font-family: Arial;
+	font-family: 'Montserrat',
+	sans-serif;
 	outline: none;
 }
 .row {
@@ -24,7 +26,8 @@ input {
 }
 body {
 	background-color: #fff;
-	font-family: Arial;
+	font-family: 'Montserrat',
+	sans-serif;
 	font-size: 16px;
 }
 h1 {
@@ -63,5 +66,11 @@ h2 {
 }
 .row {
 	@include row-flex();
+}
+.page {
+	padding-left: 160px;
+	@media (max-width: $break_sm) {
+		padding-left: 0;
+	}
 }
 // /settings

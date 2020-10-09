@@ -1,11 +1,14 @@
 .passport {
   &_img {
-    width: 150px;
     &:after {
-      padding-top: 150%;
+      padding-top: 100%;
     }
   }
   &_name {
+    padding: 10px 0;
+    background-color: #f6f6f6;
     text-align: center;
+    color: #2a2a2a;
+    font-weight: 600;
   }
 }

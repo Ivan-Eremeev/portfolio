@@ -1,0 +1,41 @@
+.welcome {
+  min-height: 100vh;
+  background-image: url(../img/welcome-bg.jpg);
+  background-size: cover;
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &_content {
+    color: #fff;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  &_hi {
+    font-size: 100px; 
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  &_title {
+    display: block;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: 25px;
+    span {
+      display: block;
+      font-size: 30px;
+      margin-top: 20px;
+    }
+  }
+}

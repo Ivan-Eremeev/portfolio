@@ -16,12 +16,22 @@ block style-libs
 
 block content
 
-	include blocks/header.jade
+	.page
 
-	.content
-		.wrapper
+		include blocks/header.jade
 
-	include blocks/footer.jade
+		.content
+
+				// welcome
+				.welcome
+					.wrapper
+						.welcome_content
+							.welcome_hi Здравствуйте!
+								h1.welcome_title я Иван Еремеев
+									span Разработчик веб-сайтов
+				//	/welcome
+
+		include blocks/footer.jade
 
 block js-libs
 	script(src="js/libs/jquery.min.js")

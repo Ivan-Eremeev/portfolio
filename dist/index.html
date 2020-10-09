@@ -5,50 +5,57 @@
     <title>Навигация</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="description" content=""><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!-- header-->
-    <header class="header" id="header">
-      <div class="wrapper">
-        <!-- passport-->
-        <div class="passport">
-          <div class="passport_img img-responsive"><img src="img/photo.jpg" alt="photo"></div>
-          <div class="passport_name">Иван Еремеев</div>
-        </div>
-        <!--	/passport-->
+    <div class="page">
+      <!-- header-->
+      <header class="header" id="header">
         <!-- menu-->
-        <div class="menu menu--right js-menu">
+        <div class="menu menu--left js-menu">
           <div class="menu_btn" id="menu-btn"></div>
           <nav class="menu_nav">
-            <ul class="menu_list">
-              <li class="menu_item"><a class="menu_link" href="#">Меню 1</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Меню 2</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Меню 3</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Меню 4</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Меню 5</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Меню 6</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Меню 7</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Меню 8</a></li>
-            </ul>
+            <div class="menu_nav-in">
+              <!-- passport-->
+              <div class="passport">
+                <div class="passport_img img-responsive"><img src="img/photo.jpg" alt="photo"></div>
+                <div class="passport_name">Иван Еремеев</div>
+              </div>
+              <!--	/passport-->
+              <ul class="menu_list">
+                <li class="menu_item"><a class="menu_link active" href="#"><span class="menu_icon">&#xe648 </span><span class="menu_text">Главная</span></a></li>
+                <li class="menu_item"><a class="menu_link" href="#"><span class="menu_icon">&#xe605</span><span class="menu_text">Обо мне</span></a></li>
+                <li class="menu_item"><a class="menu_link" href="#"><span class="menu_icon">&#xe6c4</span><span class="menu_text">Услуги</span></a></li>
+                <li class="menu_item"><a class="menu_link" href="#"><span class="menu_icon">&#xe622</span><span class="menu_text">Портфолио</span></a></li>
+                <li class="menu_item"><a class="menu_link" href="#"><span class="menu_icon">&#xe63a</span><span class="menu_text">Контакты</span></a></li>
+              </ul>
+              <!-- social-->
+              <ul class="social">
+                <li class="social_item"><a class="social_link" href="#"><i class="fab fa-vk"></i></a></li>
+                <li class="social_item"><a class="social_link" href="#"><i class="fab fa-youtube"></i></a></li>
+                <li class="social_item"><a class="social_link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social_item"><a class="social_link" href="#"><i class="fab fa-instagram-square"></i></a></li>
+              </ul>
+              <!--	/social-->
+            </div>
             <div class="menu_close" id="menu-close"></div>
           </nav>
           <div class="menu_over" id="menu-over"></div>
         </div>
         <!-- /menu-->
+      </header>
+      <!-- /header-->
+      <div class="content">
+        <div class="wrapper"><a href="home.html">Главная</a></div>
       </div>
-    </header>
-    <!-- /header-->
-    <div class="content">
-      <div class="wrapper"><a href="home.html">Главная</a></div>
+      <!-- footer-->
+      <footer class="footer"> 
+        <div class="wrapper"> </div>
+      </footer>
+      <!-- /footer-->
     </div>
-    <!-- footer-->
-    <footer class="footer"> 
-      <div class="wrapper"> </div>
-    </footer>
-    <!-- /footer-->
-    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/jquery.min.js"></script><script src="https://kit.fontawesome.com/b7bf307800.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
