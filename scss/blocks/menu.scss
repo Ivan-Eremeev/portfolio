@@ -6,9 +6,14 @@
 		overflow-y: auto;
 	}
 	&_nav-in {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		min-height: 100vh;
-		padding-bottom: 100px;
 		position: relative;
+	}
+	&_flex {
+		margin-bottom: 100px;
 	}
 	&_list {
 		text-align: center;
