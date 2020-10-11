@@ -1,25 +1,17 @@
 .menu {
 	
 	&_nav {
-		height: 100vh;
-		background-color: $blue;
-		overflow-y: auto;
-	}
-	&_nav-in {
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 		min-height: 100vh;
-		position: relative;
-	}
-	&_flex {
-		margin-bottom: 100px;
+		flex-direction: column;
+		background-color: $blue;
 	}
 	&_list {
 		text-align: center;
 		font-size: 12px;
 		text-transform: uppercase;
 		overflow: hidden;
+		margin-bottom: 100px;
 	}
 	&_item {
 		border-bottom: 1px solid $blueHov;

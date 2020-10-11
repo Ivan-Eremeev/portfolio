@@ -6,57 +6,54 @@ header.header#header
 	.menu.menu--left.js-menu
 		#menu-btn.menu_btn
 		nav.menu_nav
-			.menu_nav-in
 
-				.menu_flex
+			// passport
+			.passport
+				.passport_img.img-responsive
+					img(src="img/photo.jpg", alt="photo")
+				.passport_name Иван Еремеев
+			//	/passport
 
-					// passport
-					.passport
-						.passport_img.img-responsive
-							img(src="img/photo.jpg", alt="photo")
-						.passport_name Иван Еремеев
-					//	/passport
+			ul.menu_list
+				li.menu_item
+					a(href="#").menu_link.active
+						span.menu_icon &#xe648 
+						span.menu_text Главная
+				li.menu_item
+					a(href="#").menu_link
+						span.menu_icon &#xe605
+						span.menu_text Обо мне
+				li.menu_item
+					a(href="#").menu_link
+						span.menu_icon &#xe6c4
+						span.menu_text Услуги
+				li.menu_item
+					a(href="#").menu_link
+						span.menu_icon &#xe622
+						span.menu_text Портфолио
+				li.menu_item
+					a(href="#").menu_link
+						span.menu_icon &#xe63a
+						span.menu_text Контакты
 
-					ul.menu_list
-						li.menu_item
-							a(href="#").menu_link.active
-								span.menu_icon &#xe648 
-								span.menu_text Главная
-						li.menu_item
-							a(href="#").menu_link
-								span.menu_icon &#xe605
-								span.menu_text Обо мне
-						li.menu_item
-							a(href="#").menu_link
-								span.menu_icon &#xe6c4
-								span.menu_text Услуги
-						li.menu_item
-							a(href="#").menu_link
-								span.menu_icon &#xe622
-								span.menu_text Портфолио
-						li.menu_item
-							a(href="#").menu_link
-								span.menu_icon &#xe63a
-								span.menu_text Контакты
+			// social
+			ul.social
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-vk"></i>
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-youtube"></i>
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-telegram-plane"></i>
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-skype"></i>
+			//	/social
 
-				// social
-				ul.social
-					li.social_item
-						a(href="#").social_link
-							<i class="fab fa-vk"></i>
-					li.social_item
-						a(href="#").social_link
-							<i class="fab fa-youtube"></i>
-					li.social_item
-						a(href="#").social_link
-							<i class="fab fa-telegram-plane"></i>
-					li.social_item
-						a(href="#").social_link
-							<i class="fab fa-skype"></i>
-				//	/social
-
-			#menu-close.menu_close
-		#menu-over.menu_over
+	#menu-close.menu_close
+#menu-over.menu_over
 	// /menu
 
 // /header
