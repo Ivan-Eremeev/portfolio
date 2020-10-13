@@ -2,7 +2,6 @@
 	
 	&_nav {
 		display: flex;
-		min-height: 100vh;
 		flex-direction: column;
 		background-color: $blue;
 	}
@@ -94,7 +93,7 @@
 				}
 			}
 			.menu_nav {
-				position: fixed;
+				position: absolute;
 				top: 0;
 				// bottom: 0;
 				left: -500px;

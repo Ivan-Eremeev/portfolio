@@ -168,12 +168,12 @@ function myMenu(menu) {
 	over.on('click', menuClose);
 	close.on('click', menuClose);
 	function menuOpen() {
-		html.toggleClass('lock').css('padding-right',scrollbarWidth);
+		// html.toggleClass('lock').css('padding-right',scrollbarWidth);
 		menu.toggleClass('open');
 		menuBtn.toggleClass('active');
 	}
 	function menuClose() {
-		html.removeClass('lock').css('padding-right',0);
+		// html.removeClass('lock').css('padding-right',0);
 		menu.removeClass('open');
 		menuBtn.removeClass('active');
 	}

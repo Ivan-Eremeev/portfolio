@@ -187,7 +187,6 @@ h2 {
 
 .menu_nav {
 	display: flex;
-	min-height: 100vh;
 	flex-direction: column;
 	background-color: #372db4;
 }
@@ -270,7 +269,7 @@ h2 {
 		display: block;
 	}
 	.menu--left .menu_nav {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: -500px;
 		transition: 0.5s;
