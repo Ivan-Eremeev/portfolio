@@ -189,7 +189,6 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	background-color: #372db4;
-	overflow-y: scroll;
 }
 .menu_list {
 	text-align: center;
@@ -245,6 +244,7 @@ h2 {
 	}
 	.menu_nav {
 		z-index: 10;
+		overflow-y: scroll;
 	}
 	.menu_over {
 		z-index: 9;
@@ -451,5 +451,16 @@ h2 {
 	display: block;
 	font-size: 30px;
 	margin-top: 20px;
+}
+@media (max-width: 769px) {
+	.welcome_hi {
+		font-size: 34px;
+	}
+	.welcome_title {
+		font-size: 20px;
+	}
+	.welcome_title span {
+		font-size: 16px;
+	}
 }
 /*# sourceMappingURL=style.css.map */
