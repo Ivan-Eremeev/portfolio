@@ -158,25 +158,55 @@ $(document).ready(function () {
 // Мобильное меню
 function myMenu(menu) {
 	var menuBtn = menu.find('#menu-btn'),
+			items = $('.menu_link'),
+			item = undefined,
 			over = menu.find('#menu-over'),
 			close = menu.find('#menu-close'),
-			documentWidth = parseInt(document.documentElement.clientWidth),
-			windowsWidth = parseInt(window.innerWidth),
-			scrollbarWidth = windowsWidth - documentWidth,
-			html = $('html');
+			html = $('html'),
+			scrollbarWidth;
 	menuBtn.on('click', menuOpen);
 	over.on('click', menuClose);
 	close.on('click', menuClose);
 	function menuOpen() {
-		// html.toggleClass('lock').css('padding-right',scrollbarWidth);
-		menu.toggleClass('open');
-		menuBtn.toggleClass('active');
+		html.addClass('lock').css('padding-right',scrollbarWidth);
+		menu.addClass('open');
+		menuBtn.addClass('active');
 	}
 	function menuClose() {
-		// html.removeClass('lock').css('padding-right',0);
+		html.removeClass('lock').css('padding-right',0);
 		menu.removeClass('open');
 		menuBtn.removeClass('active');
 	}
+	function scrollbarWidthCalc() {
+		var documentWidth = parseInt(document.documentElement.clientWidth),
+				windowsWidth = parseInt(window.innerWidth);
+		scrollbarWidth = windowsWidth - documentWidth;
+	}
+	function menuItemToggleActive() {
+		items.each(function () {
+			if ($(this).hasClass('active')) {
+				item = $(this)
+			}
+		})
+		items.mouseenter(function () {
+			if ($(this).hasClass('active')) {
+				return undefined
+			}else {
+				item.removeClass('active')
+			}
+		})
+		items.mouseleave(function () {
+			if ($(this).hasClass('active')) {
+				return undefined
+			}else {
+				item.addClass('active')
+			}
+		})
+	}
+	scrollbarWidthCalc();
+	$(window).resize(scrollbarWidthCalc);
+	menuItemToggleActive();
+	console.log(item);
 };
 
 // // Блок с высотой окна браузера
