@@ -1,0 +1,26 @@
+.about {
+  .wrapper {
+    display: flex;
+  }
+  &_image {
+    
+  }
+  &_img {
+    
+  }
+  &_content {
+    
+  }
+  &_desc {
+    display: flex;
+  }
+  &_list {
+    width: 50%;
+    li {
+      
+    }
+    span {
+      color: #000;
+    }
+  }
+}

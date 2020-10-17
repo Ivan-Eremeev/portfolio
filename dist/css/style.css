@@ -138,6 +138,7 @@ body {
 	background-color: #f1f1f1;
 	font-family: "Montserrat", sans-serif;
 	font-size: 16px;
+	color: #5a5a5a;
 }
 
 h1 {
@@ -163,6 +164,7 @@ h2 {
 .img-responsive {
 	position: relative;
 	overflow: hidden;
+	background-color: #e1e1e1;
 }
 .img-responsive img {
 	width: 100%;
@@ -462,5 +464,51 @@ h2 {
 	.welcome_title span {
 		font-size: 16px;
 	}
+}
+
+.head {
+	padding: 124px 0 32px;
+	border-bottom: 1px solid #e1e1e1;
+	position: relative;
+}
+.head:after {
+	content: "";
+	display: block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #372db4;
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	transform: translate(0, -50%);
+}
+.head_title {
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 13px;
+	color: #000;
+}
+.head_subtitle {
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	color: #a8a8a8;
+}
+
+.about .wrapper {
+	display: flex;
+}
+.about_desc {
+	display: flex;
+}
+.about_list {
+	width: 50%;
+}
+.about_list span {
+	color: #000;
 }
 /*# sourceMappingURL=style.css.map */

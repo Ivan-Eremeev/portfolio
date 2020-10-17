@@ -30,6 +30,7 @@ $break_xs: 500px;
 // Цвета
 $blue: #372db4;
 $blueHov: #493fc8;
+$gray: #e1e1e1;
 
 // Анимация
 $trans: all .5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
@@ -41,6 +42,8 @@ $trans: all .5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 @import 'blocks/passport';
 @import 'blocks/social';
 @import 'blocks/welcome';
+@import 'blocks/head';
+@import 'blocks/about';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

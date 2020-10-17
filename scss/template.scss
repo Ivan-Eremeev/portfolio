@@ -29,6 +29,7 @@ body {
 	font-family: 'Montserrat',
 	sans-serif;
 	font-size: 16px;
+	color: #5a5a5a;
 }
 h1 {
 	font-size: 45px;
@@ -49,6 +50,7 @@ h2 {
 .img-responsive {
 	position: relative;
 	overflow: hidden;
+	background-color: $gray;
 	img {
 		width: 100%;
 		position: absolute;
@@ -66,8 +68,5 @@ h2 {
 	@media (max-width: $break_sm) {
 		padding-left: 0;
 	}
-}
-.content {
-	// height: 3000px;
 }
 // /settings

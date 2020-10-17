@@ -1,7 +1,7 @@
 extends blocks/base.jade
 
 block title 
-	title Навигация
+	title Главная
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
@@ -12,19 +12,58 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
 	//- link(rel="stylesheet", href="css/libs/slick.css")
-	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 
 block content
 
 	.page
-	
+
 		include blocks/header.jade
 
 		.content
-			.wrapper
 
-				a(href="home.html") Главная
-				a(href="about.html") Обо мне
+			.wrapper
+				// head
+				.head
+					h1.head_title Обо мне
+					.head_subtitle Я Иван Еремеев
+				//	/head
+
+			// about
+			.about
+				.wrapper
+					.about_image
+						.about_img.img-responsive
+							img(src="photo-full.jpg", alt="photo")
+					.about_content
+						.about_desc
+							ul.about_list
+								li
+									span Full Name : 
+									| Jonathon Doe
+								li
+									span Date of Birthday : 
+									| 21 January 1985
+								li
+									span Address : 
+									| Jatrabari, Dhaka, Bangladesh
+								li
+									span Job : 
+									| Frelancer
+							ul.about_list
+								li
+									span Phone : 
+									| +4573-8365-9374
+								li
+									span Skype : 
+									| johndoe_647
+								li
+									span Email : 
+									| johndoe@domain.com
+								li
+									span Website : 
+									| www.johndoe.com
+			//	/about
 
 		include blocks/footer.jade
 
