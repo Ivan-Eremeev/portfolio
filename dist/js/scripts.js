@@ -152,6 +152,20 @@ $(document).ready(function () {
 	// 	// tooltipDisable(); // Отключение всплывающей подсказки
 	// 	// sliderReinstall(); // Реинициализация слайдеров
 	// });
+
+	// Сделать левый отступ у страницы по ширине хедера
+	// function pagePadding() {
+	// 	var page = $('.page'),
+	// 			header = $('.header'),
+	// 			headerWidth = parseInt(header.outerWidth());
+	// 	if ($(window).width() > breakSm) {
+	// 		page.css('padding-left',headerWidth);
+	// 	}
+	// }
+	// pagePadding();
+
+	// Ленивая загрузка
+	$('img').lazy();
 	
 });
 

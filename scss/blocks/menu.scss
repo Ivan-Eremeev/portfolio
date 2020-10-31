@@ -1,16 +1,16 @@
 .menu {
-	
 	&_nav {
+		width: 100px;
 		display: flex;
 		flex-direction: column;
 		background-color: $blue;
+		border-bottom: 1px solid #ccc;
 	}
 	&_list {
 		text-align: center;
 		font-size: 12px;
 		text-transform: uppercase;
 		overflow: hidden;
-		margin-bottom: 100px;
 	}
 	&_item {
 		border-bottom: 1px solid $blueHov;
@@ -18,7 +18,7 @@
 	&_link {
 		display: flex;
 		flex-direction: column;
-		padding: 23px 0;
+		padding: 10px 0;
 		text-decoration: none;
 		color: #b5b0f7;
 		transition: $trans;
@@ -59,13 +59,18 @@
 			overflow-y: scroll;
 
 		}
+		&_list {
+			font-size: 10px;
+		}
 		&_item {
 
 		}
 		&_link {
 			
 		}
-
+		&_icon {
+			font-size: 25px;
+		}
 		&_over {
 			z-index: 9;
 		}

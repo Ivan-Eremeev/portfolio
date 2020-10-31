@@ -179,7 +179,7 @@ h2 {
 }
 
 .page {
-	padding-left: 160px;
+	padding-left: 100px;
 }
 @media (max-width: 769px) {
 	.page {
@@ -188,16 +188,17 @@ h2 {
 }
 
 .menu_nav {
+	width: 100px;
 	display: flex;
 	flex-direction: column;
 	background-color: #372db4;
+	border-bottom: 1px solid #ccc;
 }
 .menu_list {
 	text-align: center;
 	font-size: 12px;
 	text-transform: uppercase;
 	overflow: hidden;
-	margin-bottom: 100px;
 }
 .menu_item {
 	border-bottom: 1px solid #493fc8;
@@ -205,7 +206,7 @@ h2 {
 .menu_link {
 	display: flex;
 	flex-direction: column;
-	padding: 23px 0;
+	padding: 10px 0;
 	text-decoration: none;
 	color: #b5b0f7;
 	transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
@@ -247,6 +248,12 @@ h2 {
 	.menu_nav {
 		z-index: 10;
 		overflow-y: scroll;
+	}
+	.menu_list {
+		font-size: 10px;
+	}
+	.menu_icon {
+		font-size: 25px;
 	}
 	.menu_over {
 		z-index: 9;
@@ -377,15 +384,25 @@ h2 {
 }
 
 .header {
-	width: 160px;
-	position: absolute;
+	width: 100px;
+	background-color: #372db4;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	position: fixed;
 	top: 0;
 	left: 0;
+	bottom: 0;
 	z-index: 10;
 }
+@media (max-width: 769px) {
+	.header {
+		width: auto;
+		bottom: auto;
+		background-color: transparent;
+	}
+}
 
-.passport_img:after {
-	padding-top: 100%;
+.passport_img img {
+	display: block;
 }
 .passport_name {
 	padding: 10px;
@@ -454,15 +471,28 @@ h2 {
 	font-size: 30px;
 	margin-top: 20px;
 }
+@media (max-width: 1050px) {
+	.welcome_hi {
+		font-size: 70px;
+	}
+	.welcome_title {
+		font-size: 40px;
+	}
+	.welcome_title span {
+		font-size: 25px;
+	}
+}
 @media (max-width: 769px) {
 	.welcome_hi {
 		font-size: 34px;
 	}
 	.welcome_title {
 		font-size: 20px;
+		margin-top: 15px;
 	}
 	.welcome_title span {
 		font-size: 16px;
+		margin-top: 15px;
 	}
 }
 
@@ -506,7 +536,14 @@ h2 {
 	display: flex;
 }
 .about_list {
-	width: 50%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 200px;
+}
+.about_list li {
+	margin-bottom: 20px;
 }
 .about_list span {
 	color: #000;

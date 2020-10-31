@@ -38,14 +38,29 @@
       margin-top: 20px;
     }
   }
+  @media (max-width: $break_md) {
+    &_hi {
+      font-size: 70px;
+    }
+
+    &_title {
+      font-size: 40px;
+
+      span {
+        font-size: 25px;
+      }
+    }
+  }
   @media (max-width: $break_sm) {
     &_hi {
       font-size: 34px;
     }
     &_title {
       font-size: 20px;
+      margin-top: 15px;
       span {
         font-size: 16px;
+        margin-top: 15px;
       }
     }
   }

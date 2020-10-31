@@ -1,7 +1,7 @@
 .passport {
   &_img {
-    &:after {
-      padding-top: 100%;
+    img {
+      display: block;
     }
   }
   &_name {
