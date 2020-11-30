@@ -1,7 +1,7 @@
 extends blocks/base.jade
 
 block title 
-	title Главная
+	title Обо мне
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
@@ -11,14 +11,14 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
-	//- link(rel="stylesheet", href="css/libs/slick.css")
+	link(rel="stylesheet", href="css/libs/slick.css")
 //- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 
 block content
 
 	.page
 
-		include blocks/header.jade
+		include blocks/header_v2--inner.jade
 
 		.content
 
@@ -29,47 +29,163 @@ block content
 					.head_subtitle Иван Еремеев
 				//	/head
 
-			// about
-			.about
-				.wrapper
-					.about_image
-						.about_img.img-responsive
-							img(src="photo-full.jpg", alt="photo")
-					.about_content
-						.about_desc
-							ul.about_list
-								li
-									span Full Name : 
-									| Jonathon Doe
-								li
-									span Date of Birthday : 
-									| 21 January 1985
-								li
-									span Address : 
-									| Jatrabari, Dhaka, Bangladesh
-								li
-									span Job : 
-									| Frelancer
-								li
-									span Phone : 
-									| +4573-8365-9374
-								li
-									span Skype : 
-									| johndoe_647
-								li
-									span Email : 
-									| johndoe@domain.com
-								li
-									span Website : 
-									| www.johndoe.com
-			//	/about
+				// about
+				.about
+					.about_img
+						img(src="img/photo-full.jpg", alt="photo")
+					.about_lists
+						ul.about_list
+							li
+								span Адрес : 
+								| Россия, Пермь
+							li
+								span Должность : 
+								| Верстальщик
+							li
+								span Профиль на fl.ru : 
+								a(href="https://www.fl.ru/users/ivan_eremeev/portfolio/" target="_blank") ivan_eremeev
+						ul.about_list
+							li
+								span Skype : 
+								a(href="https://join.skype.com/invite/bcaYnpFGIENN" target="_blank") ivan.eremeev_1
+							li
+								span Telegram : 
+								a(href="https://t.me/IvanMessage" target="_blank") IvanMessage
+							li
+								span Email : 
+								a(href="mailto:ivan.frontcoder@gmail.com" target="_blank") ivan.frontcoder@gmail.com
 
+					.about_descr
+						p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Коварный, всеми запятых диких оксмокс назад раз он свое использовало рыбного решила то переписывается ручеек! Родного лучше текста алфавит, семантика имеет жаренные точках взобравшись гор использовало своих! Необходимыми напоивший текст букв свою маленькая ручеек родного большой, языкового проектах правилами запятых дал ему переписали встретил рекламных над наш переписывается своего! Злых рыбными последний даль от всех, имени путь переписали наш запятых журчит, языком скатился пояс они правилами ведущими что себя обеспечивает агентство решила своего коварный. Все он снова путь назад? Знаках букв текста, рукописи рекламных моей до, первую домах мир дал не толку! Образ своих продолжил, океана власти это дал не живет взгляд, свой гор напоивший проектах его журчит мир собрал пунктуация! Парадигматическая лучше рукопись заглавных переулка первую, прямо путь имеет заголовок большого своего послушавшись. Запятых толку алфавит необходимыми первую одна даль проектах ее вершину маленький злых образ своего все всемогущая которое реторический они за, правилами переулка! Имеет, силуэт переулка? Снова пояс даль которое диких дал продолжил знаках, скатился там, взгляд всеми рыбными злых ручеек страну заманивший коварных своего буквенных выйти океана мир. Даже сих, раз жаренные инициал, города однажды пор, за семантика ручеек деревни переулка переписывается прямо вдали. Последний, большой предупреждал?
+				//	/about
+
+			// skills
+			.skills
+				.wrapper
+					// head
+					.head
+						h2.head_title Мои навыки
+						.head_subtitle Профессиональные знания
+
+					.skills_row
+						.skills_col
+							ul.skills_list
+								li.skills_item
+									span.skills_text HTML, CSS - 
+										span.count-number(data-val-up="0" data-val-to="95" data-duration="3000") 95
+										| %
+									span.skills_line(data-width="95%")
+										span.skills_placeholder
+								li.skills_item
+									span.skills_text Javascript(JQuery) - 
+										span.count-number(data-val-up="0" data-val-to="85" data-duration="3000") 85
+										| %
+									span.skills_line(data-width="85%")
+										span.skills_placeholder
+								li.skills_item
+									span.skills_text Jade(Pug) - 
+										span.count-number(data-val-up="0" data-val-to="95" data-duration="3000") 95
+										| %
+									span.skills_line(data-width="95%")
+										span.skills_placeholder
+								li.skills_item
+									span.skills_text Gulp - 
+										span.count-number(data-val-up="0" data-val-to="95" data-duration="3000") 95
+										| %
+									span.skills_line(data-width="95%")
+										span.skills_placeholder
+						.skills_col
+							ul.skills_list
+								li.skills_item
+									span.skills_text SCSS - 
+										span.count-number(data-val-up="0" data-val-to="95" data-duration="3000") 95
+										| %
+									span.skills_line(data-width="95%")
+										span.skills_placeholder
+								li.skills_item
+									span.skills_text PHP - 
+										span.count-number(data-val-up="0" data-val-to="35" data-duration="3000") 35
+										| %
+									span.skills_line(data-width="35%")
+										span.skills_placeholder
+								li.skills_item
+									span.skills_text Wordpress - 
+										span.count-number(data-val-up="0" data-val-to="45" data-duration="3000") 45
+										| %
+									span.skills_line(data-width="45%")
+										span.skills_placeholder
+								li.skills_item
+									span.skills_text Git - 
+										span.count-number(data-val-up="0" data-val-to="85" data-duration="3000") 85
+										| %
+									span.skills_line(data-width="85%")
+										span.skills_placeholder
+					//	/head
+			//	/skills
+
+			.wrapper
+
+				// testimonials
+				.testimonials
+					// head
+					.head
+						h2.head_title Отзывы
+						.head_subtitle Что говорят обо мне клиенты
+					//	/head
+
+					.testimonials_slider
+
+						.testimonials_slide
+							.testimonials_text Иван сделал все, как договаривались, был на связи в обговоренное время, небольшие правки вносил без проблем, рекомендую!
+							a(href="https://www.fl.ru/users/zakaz15/" target="_blank")
+								img(data-lazy="img/testimonials/f_4e28c63ad65fa.png", alt="").testimonials_avatar
+							.testimonials_name
+								a(href="https://www.fl.ru/users/zakaz15/" target="_blank") Дмитрий Медведев
+
+						.testimonials_slide
+							.testimonials_text Иван отлично справился, все сделал быстро и качественно, что приятно порадовало. Готов всем рекомендовать. Большое спасибо за сотрудничество.
+							a(href="https://www.fl.ru/users/koelkirill/" target="_blank")
+								img(data-lazy="img/testimonials/no_foto_b.png", alt="").testimonials_avatar
+							.testimonials_name
+								a(href="https://www.fl.ru/users/koelkirill/" target="_blank") Кирилл Лебедев
+						
+						.testimonials_slide
+							.testimonials_text Отличный верстальщик! Разумные цены. Сделал все достойно.
+							a(href="https://www.fl.ru/users/atrian/" target="_blank")
+								img(data-lazy="img/testimonials/no_foto_b.png", alt="").testimonials_avatar
+							.testimonials_name
+								a(href="https://www.fl.ru/users/atrian/" target="_blank") Тимур Асташко
+
+						.testimonials_slide
+							.testimonials_text Спасибо за отличную и профессиональную работу! Задача выполнена в срок и с учетом всех пожеланий.
+							a(href="https://www.fl.ru/users/borisov_85/" target="_blank")
+								img(data-lazy="img/testimonials/f_4e428f81ce776.jpg", alt="").testimonials_avatar
+							.testimonials_name
+								a(href="https://www.fl.ru/users/borisov_85/" target="_blank") Кирилл Борисов
+
+						.testimonials_slide
+							.testimonials_text Отличная работа! Все было сделано четко и в срок, Иван всегда был на связи и делал все необходимые правки, которых было совсем не много. Спасибо! Могу смело рекомендовать к сотрудничеству
+							a(href="https://www.fl.ru/users/ironhand/" target="_blank")
+								img(data-lazy="img/testimonials/no_foto_b.png", alt="").testimonials_avatar
+							.testimonials_name
+								a(href="https://www.fl.ru/users/ironhand/" target="_blank") Сергей Tialas
+
+						.testimonials_slide
+							.testimonials_text Отличная работа, быстро и качественно. Спасибо. Рекомендую мастера, буду обращаться еще.
+							a(href="https://www.fl.ru/users/bmvmx/" target="_blank")
+								img(data-lazy="img/testimonials/no_foto_b.png", alt="").testimonials_avatar
+							.testimonials_name
+								a(href="https://www.fl.ru/users/bmvmx/" target="_blank") Max Balkovsky
+
+					.testimonials_controlls
+
+				//	/testimonials
 		include blocks/footer.jade
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
 	//- script(src="js/libs/jquery.fancybox.min.js")
-	//- script(src="js/libs/slick.min.js")
+	script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
 	//- script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")

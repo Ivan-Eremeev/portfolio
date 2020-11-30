@@ -1,0 +1,142 @@
+.testimonials {
+  margin-bottom: 100px;
+  &_slider {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  &_slide {
+    text-align: center;
+  }
+  &_text {
+    margin-bottom: 50px;
+    line-height: 1.5;
+    color: #000;
+  }
+  &_avatar {
+    display: inline-block !important;
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  &_name {
+    margin-bottom: 20px;
+    font-weight: bold;
+    a {
+      color: $grayDark;
+    }
+  }
+  &_controlls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &_arrow {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $bd;
+    border-radius: 3px;
+    font-family: "Pe-icon-7-stroke";
+    font-size: 40px;
+    position: relative;
+    transition: $trans;
+    cursor: pointer;
+    &:before {
+      content: "\e682";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    &--prev {
+      order: 1;
+      &:before {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+      &:hover {
+        // transform: rotate(-360deg);
+      }
+    }
+    &--next {
+      order: 3;
+      &:before {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+      &:hover {
+        // transform: rotate(360deg);
+      }
+    }
+    &:hover {
+      border-color: $blue;
+      color: $blue;
+    }
+  }
+  .slick-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    order: 2;
+    margin: 0 30px;
+    cursor: pointer;
+    li {
+      width: 10px;
+      height: 10px;
+      background-color: $bd;
+      border-radius: 100%;
+      margin: 3px;
+      transition: $trans;
+      &.slick-active {
+        background-color: $blue;
+      }
+      &:hover {
+        transform: translate(0,-5px);
+      }
+    }
+    button {
+      border: none;
+      font-size: 0;
+    }
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 50px;
+  }
+}
+
+.slick-active {
+  .testimonials {
+    &_text {
+      animation: fadeInUp 1.5s ease;
+    }
+    &_avatar {
+      animation: fadeInDown 1.5s ease;
+    }
+    &_name {
+      animation: fadeInDown 1.5s ease;
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(0,-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(0, 30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

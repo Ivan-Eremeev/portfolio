@@ -30,20 +30,29 @@ $break_xs: 500px;
 // Цвета
 $blue: #372db4;
 $blueHov: #493fc8;
-$gray: #e1e1e1;
+$gray: #f7f7f7;
+$grayDark: #5a5a5a;
+$bd: #e2e2e2;
 
 // Анимация
 $trans: all .5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 
 // Блоки стилей
 @import 'template';
-@import 'blocks/menu';
-@import 'blocks/header';
+// @import 'blocks/menu';
+@import 'blocks/menu_v2';
+// @import 'blocks/header';
+@import 'blocks/header_v2';
+@import 'blocks/footer';
 @import 'blocks/passport';
 @import 'blocks/social';
 @import 'blocks/welcome';
 @import 'blocks/head';
 @import 'blocks/about';
+@import 'blocks/skills';
+@import 'blocks/testimonials';
+@import 'blocks/catalog';
+@import 'blocks/card';
 // @import 'blocks/mmenu';
 // @import 'blocks/modal';
 // @import 'blocks/tooltipster-noir';

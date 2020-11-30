@@ -1,7 +1,9 @@
 .head {
-  padding: 124px 0 32px;
-  border-bottom: 1px solid $gray;
+  padding-bottom: 30px;;
+  margin-bottom: 100px;
+  border-bottom: 1px solid $bd;
   position: relative;
+  letter-spacing: 2px;
   &:after {
     content: '';
     display: block;
@@ -10,9 +12,9 @@
     border-radius: 50%;
     background-color: $blue;
     position: absolute;
-    bottom: -12px;
+    bottom: -7px;
     left: 50%;
-    transform: translate(0,-50%);
+    transform: translate(-50%,0);
   }
   &_title {
     font-size: 24px;
@@ -28,5 +30,8 @@
     text-align: center;
     text-transform: uppercase;
     color: #a8a8a8;
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 50px;
   }
 }

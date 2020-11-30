@@ -1,0 +1,108 @@
+extends blocks/base.jade
+
+block title 
+	title Портфолио
+
+block style-libs
+	//- link(rel="stylesheet", href="css/libs/animate.min.css")
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+
+block content
+
+	.page
+
+		include blocks/header_v2--inner.jade
+
+		.content
+
+			.wrapper
+
+				// head
+				.head
+					h1.head_title Портфолио
+					.head_subtitle Мои работы
+				//	/head
+
+				// catalog
+				.catalog
+					.row
+						.catalog_col
+							a(href="#" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/noimage-768x768.gif", alt="")
+									span.card_overlay
+										span.card_text Сайт для заказчика
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/autochehly/dist/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_1515f26d88694ed8.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка интернет-магазина авточехлов
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/youpassport/dist/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_2125cfe387520c6e.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка сайта паспортного стола
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/imperium/dist/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_1005cdd703325793.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка Landing-Page для салона красоты
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/lstk/dist/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_6945d10abb31c224.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка Landing-Page для строительной компании
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/icoadmin/dist/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_7015c5d9f3907085.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка Landing-Page для иностранной компании
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/kohldesign/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_4625bcca76d2468d.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка Landing-Page для брендового агенства
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/q-detailing/dist/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_4375b6be4d67505d.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка Landing-Page для автосервиса
+						.catalog_col
+							a(href="https://ivan-eremeev.github.io/stroiecostandart/" target="_blank").card
+								span.card_img.responsive_img
+									img(src="img/catalog/f_3335b0fc9b15ffe5.jpg", alt="")
+									span.card_overlay
+										span.card_text Верстка Landing-Page строительно-ремонтной фирмы
+				//	/catalog
+				
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/wow.min.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

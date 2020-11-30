@@ -18,7 +18,7 @@ block content
 
 	.page
 
-		include blocks/header.jade
+		include blocks/header_v2.jade
 
 		.content
 
@@ -28,10 +28,26 @@ block content
 					.welcome_content
 						.welcome_hi Здравствуйте!
 							h1.welcome_title я Иван Еремеев
-								span Разработчик веб-сайтов
+								span#text-print Разработчик веб-сайтов
 			//	/welcome
 
-		include blocks/footer.jade
+			// social
+			ul.social
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-vk"></i>
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-youtube"></i>
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-telegram-plane"></i>
+				li.social_item
+					a(href="#").social_link
+						<i class="fab fa-skype"></i>
+			//	/social
+
+		//- include blocks/footer.jade
 
 block js-libs
 	script(src="js/libs/jquery.min.js")

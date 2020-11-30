@@ -34,7 +34,78 @@ $(document).ready(function () {
 	});
 
 	// Мобильное меню
+	function myMenu(menu) {
+		var menuBtn = menu.find('#menu-btn'),
+				items = menu.find('a'),
+				item = undefined,
+				over = menu.find('#menu-over'),
+				close = menu.find('#menu-close'),
+				html = $('html'),
+				scrollbarWidth;
+		menuBtn.on('click', menuOpen);
+		over.on('click', menuClose);
+		close.on('click', menuClose);
+		function menuOpen() {
+			html.addClass('lock').css('padding-right',scrollbarWidth);
+			menu.addClass('open');
+			menuBtn.addClass('active');
+		}
+		function menuClose() {
+			html.removeClass('lock').css('padding-right',0);
+			menu.removeClass('open');
+			menuBtn.removeClass('active');
+		}
+		function scrollbarWidthCalc() {
+			var documentWidth = parseInt(document.documentElement.clientWidth),
+					windowsWidth = parseInt(window.innerWidth);
+			scrollbarWidth = windowsWidth - documentWidth;
+		}
+		function menuItemToggleActive() {
+			items.each(function () {
+				if ($(this).hasClass('active')) {
+					item = $(this)
+				}
+			})
+			items.mouseenter(function () {
+				if ($(this).hasClass('active')) {
+					return undefined
+				}else {
+					item.removeClass('active')
+				}
+			})
+			items.mouseleave(function () {
+				if ($(this).hasClass('active')) {
+					return undefined
+				}else {
+					item.addClass('active')
+				}
+			})
+		}
+		scrollbarWidthCalc();
+		$(window).resize(scrollbarWidthCalc);
+		// menuItemToggleActive();
+	};
 	myMenu($('.js-menu'));
+
+	// Слайдер в отзывах
+	function slider(slider) {
+		if (slider.length) {
+			slider.slick({
+				slidesToShow: 1, // Сколько слайдов показывать на экране
+				slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+				dots: true, // Пагинация
+				arrows: true, // Стрелки
+				infinite: false, // Зацикленное пролистывание
+				swipe: true, // Перелистывание пальцем
+				draggable: true, // Перелистывание мышью
+				appendDots: '.testimonials_controlls',
+				appendArrows: '.testimonials_controlls',
+				prevArrow: '<div class="testimonials_arrow testimonials_arrow--prev">',
+				nextArrow: '<div class="testimonials_arrow testimonials_arrow--next">'
+			});
+		}
+	};
+	slider($('.testimonials_slider'));
 
 	// Блок с высотой окна браузера
 	// screenHeight($('#full-height'));
@@ -72,10 +143,57 @@ $(document).ready(function () {
 	// modalHide($('#modal-1'));
 
 	// Текст печатная машинка
-	// textPrint($('#text-print'));
+	function textPrint(block) {
+		var textPrint = block,
+			a = textPrint.text(),
+			j = 0,
+			c = a.length,
+			time = 130;
+		textPrint.text('');
+		setInterval(function () {
+			if (j<c) {
+				textPrint.text(textPrint.text() + a[j]);
+				j++;
+			}
+		},time);
+	};
+	textPrint($('#text-print'));
 
-	// Анимация увеличения значения числа
-	// countNumber($(".count-number"));
+	// Анимация в блоке навыков
+	function animateSkills (block) {
+		block.each(function () { 
+			var scrollTop = false,
+					countNumberStatus = true,
+					countNum = $(this).find('.count-number'),
+					line = $(this).find('.skills_line'),
+					blockPosition = countNum.position().top,
+					valUp = countNum.data('val-up'),
+					valTo = countNum.data('val-to'),
+					valDuration = countNum.data('duration');
+			countNum.html(0);
+			animate();
+			$(window).scroll(function () {
+				animate();
+			}); 
+			function animate() {
+				scrollTop = $(window).scrollTop() + $(window).height();
+				if(scrollTop > blockPosition && countNumberStatus) {
+					$({numberValue: valUp}).animate({numberValue: valTo}, {
+						duration: valDuration,
+						easing: "swing",
+						step: function(val) {
+							countNum.html(Math.ceil(val));
+						}
+					});
+					line.find('.skills_placeholder').animate({
+						width: valTo + '%'
+					},valDuration);
+					countNumberStatus = false;
+				}
+			}
+		});
+	};
+	animateSkills($(".skills_item"));
 
 	// Делает активным пункт меню при скролле до блока
 	// menuItemActive($("#menu_list"));
@@ -168,60 +286,6 @@ $(document).ready(function () {
 	$('img').lazy();
 	
 });
-
-// Мобильное меню
-function myMenu(menu) {
-	var menuBtn = menu.find('#menu-btn'),
-			items = $('.menu_link'),
-			item = undefined,
-			over = menu.find('#menu-over'),
-			close = menu.find('#menu-close'),
-			html = $('html'),
-			scrollbarWidth;
-	menuBtn.on('click', menuOpen);
-	over.on('click', menuClose);
-	close.on('click', menuClose);
-	function menuOpen() {
-		html.addClass('lock').css('padding-right',scrollbarWidth);
-		menu.addClass('open');
-		menuBtn.addClass('active');
-	}
-	function menuClose() {
-		html.removeClass('lock').css('padding-right',0);
-		menu.removeClass('open');
-		menuBtn.removeClass('active');
-	}
-	function scrollbarWidthCalc() {
-		var documentWidth = parseInt(document.documentElement.clientWidth),
-				windowsWidth = parseInt(window.innerWidth);
-		scrollbarWidth = windowsWidth - documentWidth;
-	}
-	function menuItemToggleActive() {
-		items.each(function () {
-			if ($(this).hasClass('active')) {
-				item = $(this)
-			}
-		})
-		items.mouseenter(function () {
-			if ($(this).hasClass('active')) {
-				return undefined
-			}else {
-				item.removeClass('active')
-			}
-		})
-		items.mouseleave(function () {
-			if ($(this).hasClass('active')) {
-				return undefined
-			}else {
-				item.addClass('active')
-			}
-		})
-	}
-	scrollbarWidthCalc();
-	$(window).resize(scrollbarWidthCalc);
-	menuItemToggleActive();
-	console.log(item);
-};
 
 // // Блок с высотой окна браузера
 // function screenHeight(fullHeight) {
@@ -373,41 +437,6 @@ function myMenu(menu) {
 // 	thisModal.removeClass('open');
 // 	thisModal.hide();
 // 	html.removeClass('lock').css('padding-right',0);
-// };
-
-// Текст печатная машинка
-// function textPrint(block) {
-// 	var textPrint = block,
-// 		a = textPrint.text(),
-// 		j = 0,
-// 		c = a.length,
-// 		time = 50;
-// 	textPrint.text('');
-// 	setInterval(function () {
-// 		if (j<c) {
-// 			textPrint.text(textPrint.text() + a[j]);
-// 			j++;
-// 		}
-// 	},time);
-// };
-
-// Анимация увеличения значения числа
-// var	countNumberStatus = true;
-// function countNumber (block) {
-// 	var scrollEvent = ($(window).scrollTop() > (block.position().top - 400)),
-// 			valUp = block.data('val-up'),
-// 			valTo = block.data('val-to'),
-// 			valDuration = block.data('duration');
-// 	if(scrollEvent && countNumberStatus) {
-// 		$({numberValue: valUp}).animate({numberValue: valTo}, {
-// 			duration: valDuration,
-// 			easing: "swing",
-// 			step: function(val) {
-// 				block.html(Math.ceil(val));
-// 			}
-// 		});
-// 		countNumberStatus = false;
-// 	}
 // };
 
 // // Делает активным пункт меню при скролле до блока

@@ -1,0 +1,49 @@
+.card {
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+  margin-bottom: $gutter;
+  text-align: center;
+  line-height: 1.5em;
+  &_img {
+    display: block;
+    position: relative;
+    &:after {
+      padding-top: 100%;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &_overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  &_text {
+    display: block;
+    transform: translate(0,10px);
+    transition: 0.3s;
+  }
+  &:hover {
+    .card_overlay {
+      opacity: 1;
+    }
+    .card_text {
+      transform: translate(0,0);
+    }
+  }
+}

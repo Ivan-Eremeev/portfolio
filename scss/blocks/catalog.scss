@@ -1,0 +1,11 @@
+.catalog {
+  margin-bottom: 100px;
+  &_col {
+    @include col(4);
+    @include col-sm(6);
+    @include col-xs(12);
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 50px;
+  }
+}
