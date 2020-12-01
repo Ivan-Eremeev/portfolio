@@ -12,6 +12,7 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
 	link(rel="stylesheet", href="css/libs/slick.css")
+	link(rel="stylesheet", href="css/libs/aos.css")
 //- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 
 block content
@@ -22,6 +23,10 @@ block content
 
 		.content
 
+			// header-placeholder
+			.header-placeholder
+			//	/header-placeholder
+
 			.wrapper
 				// head
 				.head
@@ -30,7 +35,7 @@ block content
 				//	/head
 
 				// about
-				.about
+				.about(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300")
 					.about_img
 						img(src="img/photo-full.jpg", alt="photo")
 					.about_lists
@@ -56,14 +61,16 @@ block content
 								a(href="mailto:ivan.frontcoder@gmail.com" target="_blank") ivan.frontcoder@gmail.com
 
 					.about_descr
-						p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Коварный, всеми запятых диких оксмокс назад раз он свое использовало рыбного решила то переписывается ручеек! Родного лучше текста алфавит, семантика имеет жаренные точках взобравшись гор использовало своих! Необходимыми напоивший текст букв свою маленькая ручеек родного большой, языкового проектах правилами запятых дал ему переписали встретил рекламных над наш переписывается своего! Злых рыбными последний даль от всех, имени путь переписали наш запятых журчит, языком скатился пояс они правилами ведущими что себя обеспечивает агентство решила своего коварный. Все он снова путь назад? Знаках букв текста, рукописи рекламных моей до, первую домах мир дал не толку! Образ своих продолжил, океана власти это дал не живет взгляд, свой гор напоивший проектах его журчит мир собрал пунктуация! Парадигматическая лучше рукопись заглавных переулка первую, прямо путь имеет заголовок большого своего послушавшись. Запятых толку алфавит необходимыми первую одна даль проектах ее вершину маленький злых образ своего все всемогущая которое реторический они за, правилами переулка! Имеет, силуэт переулка? Снова пояс даль которое диких дал продолжил знаках, скатился там, взгляд всеми рыбными злых ручеек страну заманивший коварных своего буквенных выйти океана мир. Даже сих, раз жаренные инициал, города однажды пор, за семантика ручеек деревни переулка переписывается прямо вдали. Последний, большой предупреждал?
+						p Здравствуйте, моё имя Иван Еремеев. Я занимаюсь версткой сайтов. Работаю на фриланс бирже 
+							a(href="https://www.fl.ru/users/ivan_eremeev/portfolio/" target="blank") fl.ru 
+							| с 2018 года. Ответственный и пунктуальный. Проверяю свою верстку на валидацию по стандартам w3c. Оптимизирую на скорость загрузки выше 80-ти по google page speed. Всегда довожу работу до конца. Не пропадаю и не теряюсь. 
 				//	/about
 
 			// skills
 			.skills
 				.wrapper
 					// head
-					.head
+					.head(data-aos="fade-up" data-aos-duration="1000")
 						h2.head_title Мои навыки
 						.head_subtitle Профессиональные знания
 
@@ -128,9 +135,9 @@ block content
 				// testimonials
 				.testimonials
 					// head
-					.head
+					.head(data-aos="fade-up" data-aos-duration="1000")
 						h2.head_title Отзывы
-						.head_subtitle Что говорят обо мне клиенты
+						.head_subtitle Что говорят обо мне заказчики
 					//	/head
 
 					.testimonials_slider
@@ -186,6 +193,7 @@ block js-libs
 	script(src="js/libs/jquery.min.js")
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	script(src="js/libs/slick.min.js")
+	script(src="js/libs/aos.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")
 	//- script(src="js/libs/jquery.inputmask.min.js")
 	//- script(src="js/libs/autosize.min.js")

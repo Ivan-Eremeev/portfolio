@@ -1,0 +1,48 @@
+.contact {
+  margin-bottom: 100px;
+  &_col {
+    @include col(6);
+    @include col-sm(12);
+  }
+  &_title {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &_list {
+    
+  }
+  &_item {
+    margin-bottom: 5px;
+  }
+  &_link {
+    display: inline-block;
+    padding: 10px 0;
+    span {
+      vertical-align: middle;
+    }
+    &:hover {
+      .contact_text {
+        color: $blue;
+      }
+    }
+  }
+  &_text {
+    color: $grayDark;
+    font-weight: 500;
+    transition: .3s;
+  }
+  &_icon {
+    margin: 5px;
+    margin-right: 10px;
+    font-size: 20px;
+    color: $blue;
+  }
+  @media (max-width: $break_sm) {
+    margin-bottom: 0;
+    &_col {
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -1,8 +1,14 @@
 .welcome {
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(../img/welcome-bg.jpg);
   background-size: cover;
   position: relative;
+  .wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &:before {
     content: '';
     display: block;
@@ -16,11 +22,13 @@
   &_content {
     color: #fff;
     font-weight: 600;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    position: relative;
     z-index: 2;
+    animation: fadeInUp 1.5s;
   }
   &_hi {
     font-size: 100px; 

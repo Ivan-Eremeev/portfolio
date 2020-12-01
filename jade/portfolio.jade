@@ -4,6 +4,7 @@ block title
 	title Портфолио
 
 block style-libs
+	link(rel="stylesheet", href="css/libs/aos.css")
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
 	//- link(rel="stylesheet", href="css/libs/fullpage.css")
@@ -22,6 +23,10 @@ block content
 
 		.content
 
+			// header-placeholder
+			.header-placeholder
+			//	/header-placeholder
+
 			.wrapper
 
 				// head
@@ -33,55 +38,55 @@ block content
 				// catalog
 				.catalog
 					.row
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="#" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/noimage-768x768.gif", alt="")
 									span.card_overlay
 										span.card_text Сайт для заказчика
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/autochehly/dist/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_1515f26d88694ed8.jpg", alt="")
 									span.card_overlay
 										span.card_text Верстка интернет-магазина авточехлов
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/youpassport/dist/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_2125cfe387520c6e.jpg", alt="")
 									span.card_overlay
 										span.card_text Верстка сайта паспортного стола
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/imperium/dist/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_1005cdd703325793.jpg", alt="")
 									span.card_overlay
 										span.card_text Верстка Landing-Page для салона красоты
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/lstk/dist/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_6945d10abb31c224.jpg", alt="")
 									span.card_overlay
 										span.card_text Верстка Landing-Page для строительной компании
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/icoadmin/dist/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_7015c5d9f3907085.jpg", alt="")
 									span.card_overlay
 										span.card_text Верстка Landing-Page для иностранной компании
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/kohldesign/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_4625bcca76d2468d.jpg", alt="")
 									span.card_overlay
 										span.card_text Верстка Landing-Page для брендового агенства
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/q-detailing/dist/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_4375b6be4d67505d.jpg", alt="")
 									span.card_overlay
 										span.card_text Верстка Landing-Page для автосервиса
-						.catalog_col
+						.catalog_col(data-aos="fade-up" data-aos-duration="1000")
 							a(href="https://ivan-eremeev.github.io/stroiecostandart/" target="_blank").card
 								span.card_img.responsive_img
 									img(src="img/catalog/f_3335b0fc9b15ffe5.jpg", alt="")
@@ -93,6 +98,7 @@ block content
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/aos.js")
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")

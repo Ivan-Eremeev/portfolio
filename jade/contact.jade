@@ -1,0 +1,93 @@
+extends blocks/base.jade
+
+block title 
+	title Контакты
+
+block style-libs
+	link(rel="stylesheet", href="css/libs/aos.css")
+	//- link(rel="stylesheet", href="css/libs/animate.min.css")
+	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
+	//- link(rel="stylesheet", href="css/libs/fullpage.css")
+	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.fancybox.min.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
+	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
+	//- link(rel="stylesheet", href="css/libs/slick.css")
+//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+
+block content
+
+	.page
+
+		include blocks/header_v2--inner.jade
+
+		.content
+
+			// header-placeholder
+			.header-placeholder
+			//	/header-placeholder
+
+			.wrapper
+
+				// head
+				.head
+					h1.head_title Контакты
+					.head_subtitle Как связаться со мной
+				//	/head
+
+				// contact
+				.contact(data-aos="fade-up" data-aos-duration="1000")
+					.row
+
+						.contact_col
+								h2.contact_title Написать в :
+								ul.contact_list
+									li.contact_item
+										a(href="https://t.me/IvanMessage").contact_link
+											span.contact_icon
+												<i class="fab fa-telegram-plane"></i>
+											span.contact_text Telegram
+									li.contact_item
+										a(href="https://join.skype.com/invite/bcaYnpFGIENN").contact_link
+											span.contact_icon
+												<i class="fab fa-skype"></i>
+											span.contact_text Skype
+									li.contact_item
+										a(href="mailto:ivan.frontcoder@gmail.com").contact_link
+											span.contact_icon
+												<i class="fa fa-envelope"></i>
+											span.contact_text Email
+
+						.contact_col
+							// form
+							form(action="send.php").form
+								.form_title Оставить сообщение
+								.form_input
+									input(type="text" placeholder="Ваш email" required)
+								.form_textarea
+									textarea(placeholder="Сообщение (необязательно)")
+								button.form_btn(type="submit") Отправить
+							//	/form
+
+					//	/contact
+
+				
+				
+		include blocks/footer.jade
+
+block js-libs
+	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/aos.js")
+	//- script(src="js/libs/jquery.fancybox.min.js")
+	//- script(src="js/libs/slick.min.js")
+	//- script(src="js/libs/jquery.matchHeight-min.js")
+	//- script(src="js/libs/jquery.inputmask.min.js")
+	//- script(src="js/libs/autosize.min.js")
+	//- script(src="js/libs/tooltipster.bundle.min.js")
+	//- script(src="js/libs/jquery.mmenu.min.all.js")
+	//- script(src="js/libs/wow.min.js")
+	//- script(src="js/libs/fullpage.min.js")
+	//- script(src="js/libs/jquery.vide.min.js")
+	//- script(src="js/libs/jquery.scrollbar.min.js")
+	//- script(src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+	//- script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDArYzQvxn3CL3pB92Iqn9gaDltBFLfF4Y")

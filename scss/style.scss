@@ -17,13 +17,6 @@ $break_md: 1050px;
 $break_sm: 769px;
 $break_xs: 500px;
 
-// Переменные для кастомизации Bootstrap 4
-// $grid-gutter-width: 15px; // Отступы между колонками
-// $grid-columns: 12; // Колличество колонок
-// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1410px); // Брэйкпоинты
-// $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px); // Максимальная ширина контейнера
-// $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
-
 // Шрифты
 @include font-face("Pe-icon-7-stroke", "../fonts/Pe-icon-7-stroke/Pe-icon-7-stroke", normal, normal);
 
@@ -53,6 +46,5 @@ $trans: all .5s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 @import 'blocks/testimonials';
 @import 'blocks/catalog';
 @import 'blocks/card';
-// @import 'blocks/mmenu';
-// @import 'blocks/modal';
-// @import 'blocks/tooltipster-noir';
+@import 'blocks/contact';
+@import 'blocks/form';

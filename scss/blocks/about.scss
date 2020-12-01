@@ -1,5 +1,11 @@
 .about {
   margin-bottom: 100px;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+    width: 100%;
+  }
   &_image {
     width: 350px;
     flex-shrink: 0;
@@ -29,10 +35,16 @@
     }
     a {
       color: $grayDark;
+      border-bottom: 1px solid $grayDark;
+      transition: 0.3s;
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+      }
     }
   }
   &_descr {
-    line-height: 1.5;
+    line-height: 2;
   }
   @media (max-width: $break_sm) {
     margin-bottom: 50px;

@@ -1,11 +1,22 @@
 .header {
   width: 100%;
-  padding: 20px 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
   margin-bottom: 50px;
-  // background-color: rgba(0,0,0,.7);
-  &--fixed {
-    position: fixed;
-    z-index: 10;
+  transition: 0.3s;
+  z-index: 2;
+  position: fixed;
+  z-index: 10;
+  &.stiky {
+    height: 80px;
+    background-color: $grayDark;
+    .menu_list--inner-page a {
+      color: #fff;
+      &:before {
+        background-color: #fff;
+      }
+    }
   }
   @media (max-width: $break_sm) {
     margin-bottom: 10px;
