@@ -18,6 +18,12 @@
       &:focus {
         border-color: $blue;
       }
+      &.valid {
+        border-color: green;
+      }
+      &.invalid {
+        border-color: red;
+      }
     }
   }
   &_textarea {

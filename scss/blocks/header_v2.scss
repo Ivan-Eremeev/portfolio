@@ -20,5 +20,18 @@
   }
   @media (max-width: $break_sm) {
     margin-bottom: 10px;
+    &.stiky {
+      height: 80px;
+      background-color: $grayDark;
+      .menu_btn-inner--dark {
+        background-color: #fff;
+        &:after,&:before {
+          background-color: #fff;
+        }
+      }
+      .menu_list--inner-page a {
+        color: $grayDark;
+      }
+    }
   }
 }

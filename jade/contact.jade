@@ -63,13 +63,29 @@ block content
 							form(action="send.php").form
 								.form_title Оставить сообщение
 								.form_input
-									input(type="text" placeholder="Ваш email" required)
+									input(type="text" name="email" placeholder="Ваш email" required)
 								.form_textarea
-									textarea(placeholder="Сообщение (необязательно)")
+									textarea(placeholder="Сообщение (необязательно)" name="message")
 								button.form_btn(type="submit") Отправить
 							//	/form
 
 					//	/contact
+
+			// modal
+			.modal#success
+				.modal_body
+					.modal_content
+						p Спасибо! Ваше сообщение отправлено
+						.modal_close
+			// /modal
+
+			// modal
+			.modal#error
+				.modal_body
+					.modal_content
+						p Произошла ошибка. Попробуйте еще раз.
+						.modal_close
+			// /modal
 
 				
 				

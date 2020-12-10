@@ -100,6 +100,7 @@
 			background-color: #fff;
 			position: absolute;
 			top: 50%;
+			transition: $trans;
 			&:after, &:before {
 				content: '';
 				display: block;
@@ -127,12 +128,30 @@
       }
 		}
 		&_close {
-			width: 10px;
-			height: 10px;
-			background-color: green;
+			width: 30px;
+			height: 30px;
 			position: absolute;
 			top: 20px;
 			right: 20px;
+			&:after,
+			&:before {
+				content: '';
+				display: block;
+				width: 60%;
+				height: 2px;
+				background-color: $grayDark;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+
+			&:after {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+
+			&:before {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
 		}
 		&--left {
 			&.open {
