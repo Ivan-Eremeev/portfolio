@@ -572,7 +572,7 @@ h2 {
 }
 .about_img {
 	float: left;
-	max-width: 350px;
+	max-width: 450px;
 	margin-right: 30px;
 }
 .about_img img {
@@ -889,9 +889,13 @@ h2 {
 .contact_link {
 	display: inline-block;
 	padding: 10px 0;
+	transition: 0.3s;
 }
 .contact_link span {
 	vertical-align: middle;
+}
+.contact_link:hover {
+	transform: translate(5px, 0);
 }
 .contact_link:hover .contact_text {
 	color: #372db4;
@@ -932,6 +936,10 @@ h2 {
 	border: 1px solid #e2e2e2;
 	resize: none;
 	outline: none;
+	transition: 0.3s;
+}
+.form_input input:focus {
+	border-color: #372db4;
 }
 .form_textarea {
 	height: 200px;
@@ -944,6 +952,10 @@ h2 {
 	border: 1px solid #e2e2e2;
 	resize: none;
 	outline: none;
+	transition: 0.3s;
+}
+.form_textarea textarea:focus {
+	border-color: #372db4;
 }
 .form_btn {
 	padding: 10px 30px;

@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Навигация</title>
+    <title>Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content=""><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -11,16 +11,16 @@
   <body>
     <div class="page">
       <!-- header-->
-      <header class="header" id="header">
+      <header class="header">
         <div class="wrapper">
           <!-- menu-->
           <div class="menu menu--left js-menu">
             <div class="menu_btn" id="menu-btn">
-              <div class="menu_btn-inner menu_btn-inner--dark"></div>
+              <div class="menu_btn-inner"></div>
             </div>
             <nav class="menu_nav">
-              <ul class="menu_list menu_list--inner-page">
-                <li><a class="active" href="home.html">Главная</a></li>
+              <ul class="menu_list">
+                <li><a class="active" href="index.html">Главная</a></li>
                 <li><a href="about.html">Обо мне</a></li>
                 <li><a href="portfolio.html">Портфолио</a></li>
                 <li><a href="contact.html">Контакты</a></li>
@@ -34,15 +34,25 @@
       </header>
       <!-- /header-->
       <div class="content">
-        <div class="wrapper"><a href="home.html">Главная</a><a href="about.html">Обо мне</a><a href="portfolio.html">Портфолио</a></div>
-      </div>
-      <!-- footer-->
-      <footer class="footer"> 
-        <div class="wrapper">
-          <p>&copy; Ivan Eremeev 2020</p>
+        <!-- welcome-->
+        <div class="welcome">
+          <div class="wrapper">
+            <div class="welcome_content">
+              <div class="welcome_hi">Здравствуйте!
+                <h1 class="welcome_title">я Иван Еремеев<span id="text-print">Разработчик веб-сайтов</span></h1>
+              </div>
+            </div>
+          </div>
         </div>
-      </footer>
-      <!-- /footer-->
+        <!--	/welcome-->
+        <!-- social-->
+        <ul class="social">
+          <li class="social_item"><a class="social_link" href="https://t.me/IvanMessage" target="blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li class="social_item"><a class="social_link" href="https://join.skype.com/invite/bcaYnpFGIENN" target="blank"><i class="fab fa-skype"></i></a></li>
+          <li class="social_item"><a class="social_link" href="https://vk.com/ivan.eremeev" target="blank"><i class="fab fa-vk"></i></a></li>
+        </ul>
+        <!--	/social-->
+      </div>
     </div>
     <script src="js/libs/jquery.min.js"></script><script src="https://kit.fontawesome.com/b7bf307800.js" crossorigin="anonymous"></script>
     <script src="js/libs/jquery.lazy.min.js"></script>

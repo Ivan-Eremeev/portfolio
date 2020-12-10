@@ -1,7 +1,7 @@
 extends blocks/base.jade
 
 block title 
-	title Навигация
+	title Главная
 
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
@@ -12,22 +12,42 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/jquery.mmenu.all.css")
 	//- link(rel="stylesheet", href="css/libs/jquery.scrollbar.css")
 	//- link(rel="stylesheet", href="css/libs/slick.css")
-	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
+//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 
 block content
 
 	.page
-	
-		include blocks/header_v2--inner.jade
+
+		include blocks/header_v2.jade
 
 		.content
-			.wrapper
 
-				a(href="home.html") Главная
-				a(href="about.html") Обо мне
-				a(href="portfolio.html") Портфолио
+			// welcome
+			.welcome
+				.wrapper
+					.welcome_content
+						.welcome_hi Здравствуйте!
+							h1.welcome_title я Иван Еремеев
+								span#text-print Разработчик веб-сайтов
+			//	/welcome
 
-		include blocks/footer.jade
+			// social
+			ul.social
+				//- li.social_item
+				//- 	a(href="#").social_link
+				//- 		<i class="fab fa-youtube"></i>
+				li.social_item
+					a(href="https://t.me/IvanMessage" target="blank").social_link
+						<i class="fab fa-telegram-plane"></i>
+				li.social_item
+					a(href="https://join.skype.com/invite/bcaYnpFGIENN" target="blank").social_link
+						<i class="fab fa-skype"></i>
+				li.social_item
+					a(href="https://vk.com/ivan.eremeev" target="blank").social_link
+						<i class="fab fa-vk"></i>
+			//	/social
+
+		//- include blocks/footer.jade
 
 block js-libs
 	script(src="js/libs/jquery.min.js")

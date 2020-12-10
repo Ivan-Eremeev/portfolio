@@ -19,10 +19,12 @@
   &_link {
     display: inline-block;
     padding: 10px 0;
+    transition: 0.3s;
     span {
       vertical-align: middle;
     }
     &:hover {
+      transform: translate(5px, 0);
       .contact_text {
         color: $blue;
       }
