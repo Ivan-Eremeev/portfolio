@@ -304,4 +304,3 @@ $(document).ready(function () {
 	$('img').lazy();
 	
 });
-//# sourceMappingURL=scripts.js.map
