@@ -17,17 +17,17 @@ header.header#header
         //- 	//- .passport_name Иван<br>Еремеев
         //- //	/passport
 
-        ul.menu_list.menu_list--inner-page
-          li
-            a(href="index.html").active Главная
-          li
-            a(href="about.html") Обо мне
-          //- li
-          //- 	a(href="#") Услуги
-          li
-            a(href="portfolio.html") Портфолио
-          li
-            a(href="contact.html") Контакты
+        - var menuItems = [{pageName:'Главная', pageUrl:'index.html'},{pageName:'Обо мне', pageUrl:'about.html'},{pageName:'Портфолио', pageUrl:'portfolio.html'},{pageName:'Контакты', pageUrl:'contact.html'}]
+        mixin menu()
+          ul.menu_list.menu_list--inner-page
+            each item in menuItems
+              if item.pageName == pageTitle
+                li
+                  a(href= item.pageUrl class="active")= item.pageName
+              else
+                li
+                  a(href= item.pageUrl)= item.pageName
+        + menu()
 
         #menu-close.menu_close
       #menu-over.menu_over

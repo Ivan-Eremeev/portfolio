@@ -3,6 +3,7 @@ extends blocks/base.jade
 block title 
 	title Обо мне
 
+
 block style-libs
 	//- link(rel="stylesheet", href="css/libs/animate.min.css")
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
@@ -18,6 +19,8 @@ block style-libs
 block content
 
 	.page
+
+		- var pageTitle = 'Обо мне'
 
 		include blocks/header_v2--inner.jade
 
