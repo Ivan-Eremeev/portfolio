@@ -3,21 +3,24 @@
   "version": "1.0.0",
   "description": "Gulp build",
   "devDependencies": {
-    "gulp": "*",
     "browser-sync": "*",
+    "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-clean-css": "*",
     "gulp-concat": "*",
     "gulp-concat-css": "*",
+    "gulp-group-css-media-queries": "*",
+    "gulp-imagemin": "*",
     "gulp-less": "*",
     "gulp-minify": "*",
+    "gulp-plumber": "*",
     "gulp-pug": "*",
     "gulp-rename": "*",
     "gulp-rigger": "*",
     "gulp-sass": "*",
     "gulp-uglify": "*",
-    "gulp-group-css-media-queries": "*"
+    "imagemin-pngquant": "*"
   },
   "dependencies": {},
-  "browserslist": "last 3 version"
+  "browserslist": "last 5 version"
 }
